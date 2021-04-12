@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>547</width>
+    <height>314</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>547</width>
+    <height>314</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>547</width>
+    <height>314</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>INVENTÁRIO ESTOQUE - ASSISTENCIA TECNICA DE MANUNTEÇÃO</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../IMG/recursos.qrc">
+    <normaloff>:/img/technician.svg</normaloff>:/img/technician.svg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QToolTip {
+    border: 2px solid darkkhaki;
+    padding: 5px;
+    border-radius: 3px;
+    opacity: 200;	
+	color: rgb(1, 92, 146);
+	background-color: rgb(188, 230, 254);	
+	border-color: rgb(1, 92, 146);
+}
+
+#principal{
+background-image: url(:/img/fundo.jpg);
+}
+
+QFrame, QGroupBox{
+	border: 1px;	
+	border-color: rgb(188, 230, 254);
+	color: rgb(1, 92, 146);
+	font: 10pt &quot;Franklin Gothic Heavy&quot;;	
+
+}
+
+QWidget{		
+	background-color: rgb(188, 230, 254, 150);
+}
+
+QToolButton{
+	color: rgb(255, 255, 255);
+	font: 10pt &quot;Franklin Gothic Heavy&quot;;	
+	background-color: rgba(255, 255, 255, 0);
+	margin: 0% 50% 0% 50%;	
+	padding:0% 50% 0% 50%;	
+}
+
+QToolButton:hover:pressed{
+background-color: rgb(84, 167, 216);
+}
+
+QToolButton:hover{
+	background-color: rgb(1, 92, 146);
+	
+	color: rgb(255, 255, 255);
+}
+
+QLineEdit{				
+	color: rgb(255, 255, 255);
+	background-color: rgb(84, 167, 216);
+}
+
+QLineEdit:hover, QComboBox:hover{				
+background-color: rgb(1, 92, 146);
+}
+
+QLabel{	
+	background-color: rgb(255, 255, 255 ,0);
+}
+
+QRadioButton{	
+	color: rgb(68, 154, 202);
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_7">
+   <item>
+    <widget class="QFrame" name="principal">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QGroupBox" name="grupo">
+           <property name="title">
+            <string>PRODUTO()</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <property name="topMargin">
+             <number>25</number>
+            </property>
+            <property name="rightMargin">
+             <number>9</number>
+            </property>
+            <item>
+             <widget class="QTableWidget" name="tabela">
+              <property name="iconSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="showGrid">
+               <bool>true</bool>
+              </property>
+              <property name="columnCount">
+               <number>1</number>
+              </property>
+              <attribute name="horizontalHeaderCascadingSectionResizes">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="horizontalHeaderDefaultSectionSize">
+               <number>226</number>
+              </attribute>
+              <attribute name="horizontalHeaderMinimumSectionSize">
+               <number>0</number>
+              </attribute>
+              <attribute name="verticalHeaderDefaultSectionSize">
+               <number>30</number>
+              </attribute>
+              <attribute name="verticalHeaderMinimumSectionSize">
+               <number>10</number>
+              </attribute>
+              <row>
+               <property name="text">
+                <string>PREÇO ANTERIOR</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../IMG/recursos.qrc">
+                 <normaloff>:/img/add-round-button-svgrepo-com.svg</normaloff>:/img/add-round-button-svgrepo-com.svg</iconset>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string>PREÇO MÉDIO</string>
+               </property>
+               <property name="background">
+                <color>
+                 <red>213</red>
+                 <green>239</green>
+                 <blue>255</blue>
+                </color>
+               </property>
+               <property name="icon">
+                <iconset resource="../IMG/recursos.qrc">
+                 <normaloff>:/img/dollar.svg</normaloff>:/img/dollar.svg</iconset>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string>QUANTIDADE ATUALIZADA</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../IMG/recursos.qrc">
+                 <normaloff>:/img/box.svg</normaloff>:/img/box.svg</iconset>
+               </property>
+              </row>
+              <column>
+               <property name="text">
+                <string/>
+               </property>
+              </column>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_2">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="spacing">
+          <number>6</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="atualiza_novo">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ATUALIZA ESOQUE COM O VALOR DE MÉDIA&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>USAR PREÇO MÉDIO</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../IMG/recursos.qrc">
+             <normaloff>:/img/update-arrows.svg</normaloff>:/img/update-arrows.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>45</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="atualiza_antigo">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;SALVA O ESTOQUE COM O VALOR ANTERIOR E A NOVA QUANTIDADE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>USAR PREÇO ANTERIOR</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../IMG/recursos.qrc">
+             <normaloff>:/img/package.svg</normaloff>:/img/package.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>45</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="sair">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../IMG/recursos.qrc">
+             <normaloff>:/img/cross.svg</normaloff>:/img/cross.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>45</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../IMG/recursos.qrc"/>
+ </resources>
+ <connections/>
+</ui>

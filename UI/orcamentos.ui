@@ -1,0 +1,1402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1249</width>
+    <height>625</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1249</width>
+    <height>625</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>ORDEM SERVIÇOS - ASSISTENCIA TECNICA DE MANUNTEÇÃO</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../IMG/recursos.qrc">
+    <normaloff>:/img/technician.svg</normaloff>:/img/technician.svg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QToolTip {
+    border: 2px solid darkkhaki;
+    padding: 5px;
+    border-radius: 3px;
+    opacity: 200;	
+	color: rgb(1, 92, 146);
+	background-color: rgb(188, 230, 254);	
+	border-color: rgb(1, 92, 146);
+}
+
+#tabela_saida{	
+	background-color: rgb(255, 200, 189);
+}
+
+#tabela_entrada{	
+	background-color: rgb(233, 255, 229);
+}
+
+#principal{
+	background-image: url(:/img/ordem.jpg);
+}
+
+QFrame, QGroupBox{
+	border: 1px;	
+	border-color: rgb(188, 230, 254);
+	color: rgb(1, 92, 146);
+	font: 10pt &quot;Franklin Gothic Heavy&quot;;	
+}
+
+QWidget{		
+	background-color: rgb(188, 230, 254, 200);
+}
+
+QToolButton{
+	color: rgb(255, 255, 255);
+	font: 10pt &quot;Franklin Gothic Heavy&quot;;	
+	background-color: rgba(255, 255, 255, 0);
+	margin: 0% 50% 0% 50%;	
+	padding:0% 50% 0% 50%;	
+}
+
+QToolButton:hover:pressed{
+	background-color: rgb(84, 167, 216);
+}
+
+QToolButton:hover{
+	background-color: rgb(1, 92, 146);
+	
+	color: rgb(255, 255, 255);
+}
+
+QLineEdit, QComboBox{				
+	color: rgb(255, 255, 255);
+	background-color: rgb(84, 167, 216);
+}
+
+QLineEdit:hover, QComboBox:hover{				
+	background-color: rgb(1, 92, 146);
+}
+
+QRadioButton{
+	color: rgb(1, 92, 146);	
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QRadioButton::indicator:checked:hover{
+	font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QRadioButton::indicator:indeterminate:pressed{  	
+	font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+}
+
+#valores_situacao *{	
+	font: 16pt &quot;MS Shell Dlg 2&quot;;	
+}
+
+#valores_situacao QComboBox{		
+	font: 87 16pt &quot;Arial Black&quot;;
+}
+
+#valores_situacao QLabel{		
+	font: 75 15pt &quot;Arial Black&quot;;	
+	background-color: rgba(255, 255, 255, 0);
+}
+
+#valor_total{	
+	color: rgb(255, 0, 0);	
+	font: 75 20pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QLabel{
+	background-color: rgba(255, 255, 255, 0);	
+}
+
+#label_9{	
+	font: 20pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QTableWidget{
+	background-color: rgb(68, 154, 202, 200);
+	border: 1px;
+}
+
+QTableWidget::item:selected{
+	background-color: rgb(0, 255, 255);
+}
+
+QTableWidget:item{	
+	background-color: rgb(136, 204, 245);
+}
+
+QTableWidget::indicator:unchecked {
+	background-color: rgb(68, 154, 202);
+}
+
+#frame_3{
+	margin: 0% 0% 0% 0%;	
+	padding:0% 0% 0% 0%;
+}
+
+#descricao_produto{
+	color: rgb(1, 92, 146);
+}
+
+#label_10, #label_8, #label_11{
+color: rgb(255, 255, 255);
+}
+
+#valor_servicos, #valor_pecas{	
+	color: rgb(0, 0, 0);
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_7">
+   <item>
+    <widget class="QFrame" name="principal">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_21">
+      <item>
+       <widget class="QFrame" name="frame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_11">
+           <item>
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>DESCRIÇÃO DO SERVIÇO/ATENDIMENTO</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_12">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_14">
+                 <item>
+                  <widget class="QGroupBox" name="groupBox_6">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DATA E HORA ATUAL&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="title">
+                    <string>DATA/HORA</string>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_13">
+                    <item>
+                     <widget class="QDateTimeEdit" name="data_hora">
+                      <property name="enabled">
+                       <bool>false</bool>
+                      </property>
+                      <property name="toolTip">
+                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DATA E HORA ATUAL&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      </property>
+                      <property name="buttonSymbols">
+                       <enum>QAbstractSpinBox::NoButtons</enum>
+                      </property>
+                      <property name="correctionMode">
+                       <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
+                      </property>
+                      <property name="showGroupSeparator" stdset="0">
+                       <bool>false</bool>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QGroupBox" name="groupBox_7">
+                   <property name="title">
+                    <string>DATA/HORA --- DEVOLUÇÃO</string>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_10">
+                    <item>
+                     <widget class="QDateEdit" name="data_entrada">
+                      <property name="calendarPopup">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_12">
+                 <item>
+                  <widget class="QGroupBox" name="groupBox_5">
+                   <property name="title">
+                    <string>EQUIPAMENTO</string>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_11">
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_8">
+                      <item>
+                       <widget class="QComboBox" name="equipamento">
+                        <property name="editable">
+                         <bool>true</bool>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>SELECIONE EQUIPAMENTO</string>
+                         </property>
+                        </item>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="add_equipamento">
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="../IMG/recursos.qrc">
+                          <normaloff>:/img/add-round-button-svgrepo-com.svg</normaloff>:/img/add-round-button-svgrepo-com.svg</iconset>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>32</width>
+                          <height>23</height>
+                         </size>
+                        </property>
+                        <property name="flat">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QGroupBox" name="groupBox_2">
+                   <property name="title">
+                    <string>CLIENTE</string>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_9">
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_15">
+                      <item>
+                       <widget class="QComboBox" name="cliente">
+                        <property name="editable">
+                         <bool>true</bool>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>SELECIONE CLIENTE</string>
+                         </property>
+                        </item>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="add_equipamento_2">
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="../IMG/recursos.qrc">
+                          <normaloff>:/img/find-my-friend.svg</normaloff>:/img/find-my-friend.svg</iconset>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="flat">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QGroupBox" name="groupBox_3">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DESCREVA OS PROBLEMAS QUE O PRODUTO DE ENTRADA TEM&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="title">
+                <string>DESCRIÇÃO DO EQUIPAMENTO</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_16">
+                <property name="topMargin">
+                 <number>18</number>
+                </property>
+                <item>
+                 <widget class="QTextEdit" name="descricao_produto">
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DESCREVA OS PROBLEMAS QUE O PRODUTO DE ENTRADA TEM&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="textInteractionFlags">
+                   <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+                  </property>
+                  <property name="placeholderText">
+                   <string>DESCREVA O SERVIÇO OU PRODUTO. O QUE VAI SER FEITO NO MESMO</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>198</width>
+             <height>35</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_17">
+           <item>
+            <widget class="QGroupBox" name="groupBox_8">
+             <property name="minimumSize">
+              <size>
+               <width>500</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TABELA DE ORÇAMENTO&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="title">
+              <string>PRODUTOS/SERVIÇOS</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_13">
+              <property name="leftMargin">
+               <number>9</number>
+              </property>
+              <property name="topMargin">
+               <number>18</number>
+              </property>
+              <item>
+               <widget class="QTableWidget" name="tabela_orcamento">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TABELA DE ORÇAMENTO&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="autoScrollMargin">
+                 <number>16</number>
+                </property>
+                <property name="editTriggers">
+                 <set>QAbstractItemView::NoEditTriggers</set>
+                </property>
+                <property name="dragEnabled">
+                 <bool>false</bool>
+                </property>
+                <property name="selectionBehavior">
+                 <enum>QAbstractItemView::SelectRows</enum>
+                </property>
+                <attribute name="horizontalHeaderDefaultSectionSize">
+                 <number>164</number>
+                </attribute>
+                <column>
+                 <property name="text">
+                  <string>CÓDIGO</string>
+                 </property>
+                 <property name="toolTip">
+                  <string>CÓDIGO DO ORÇAMENTO</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../IMG/recursos.qrc">
+                   <normaloff>:/img/barcode.svg</normaloff>:/img/barcode.svg</iconset>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>SERVIÇO/PRODUTO</string>
+                 </property>
+                 <property name="toolTip">
+                  <string>SERVIÇO/PRODUTO DO ORÇAMENTO</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../IMG/recursos.qrc">
+                   <normaloff>:/img/box.svg</normaloff>:/img/box.svg</iconset>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>TIPO</string>
+                 </property>
+                 <property name="toolTip">
+                  <string>O TIPO PODE SER: PRODUTO/SERVIÇO</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../IMG/recursos.qrc">
+                   <normaloff>:/img/prod_servi.svg</normaloff>:/img/prod_servi.svg</iconset>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>UNIDADE</string>
+                 </property>
+                 <property name="toolTip">
+                  <string>QUANTIDADE SELECIONADA DO PRODUTO</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../IMG/recursos.qrc">
+                   <normaloff>:/img/count.svg</normaloff>:/img/count.svg</iconset>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>VALOR(UNIDADE)</string>
+                 </property>
+                 <property name="toolTip">
+                  <string>CUSTO POR UNIDADE(R$)</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../IMG/recursos.qrc">
+                   <normaloff>:/img/dollar.svg</normaloff>:/img/dollar.svg</iconset>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>TOTAL(R$)</string>
+                 </property>
+                 <property name="toolTip">
+                  <string>TOTAL PARA ESSA LINHA</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../IMG/recursos.qrc">
+                   <normaloff>:/img/dollar.svg</normaloff>:/img/dollar.svg</iconset>
+                 </property>
+                </column>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_18">
+                <item>
+                 <widget class="QPushButton" name="add_produto">
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ADICIONE PRODUTOS NO ORÇAMENTO(EQUIPAMENTOS VENDIDOS)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>PRODUTO</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../IMG/recursos.qrc">
+                    <normaloff>:/img/stock-svgrepo-com.svg</normaloff>:/img/stock-svgrepo-com.svg</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>24</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="add_servico">
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ADICIONE SERVIÇOS NO ORÇAMENTO(SERVIÇOS REALIZADO PELO TECNICO)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>SERVIÇO</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../IMG/recursos.qrc">
+                    <normaloff>:/img/service.svg</normaloff>:/img/service.svg</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>24</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="exc_linha">
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;SELECIONE UM ITEM E FAÇA A REMOÇÃO DA LISTA DO ORÇAMENTO&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>EXCLUIR</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../IMG/recursos.qrc">
+                    <normaloff>:/img/remove.svg</normaloff>:/img/remove.svg</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>24</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_9">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>400</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="title">
+              <string>ANEXOS</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_14">
+              <property name="topMargin">
+               <number>18</number>
+              </property>
+              <item>
+               <widget class="QTabWidget" name="tabWidget">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TIRE FOTOS DO ESTADO DO PRODUTO QUANDO ELE ENTROU&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="tabPosition">
+                 <enum>QTabWidget::South</enum>
+                </property>
+                <property name="tabShape">
+                 <enum>QTabWidget::Rounded</enum>
+                </property>
+                <property name="currentIndex">
+                 <number>0</number>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>29</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <widget class="QWidget" name="tab">
+                 <attribute name="icon">
+                  <iconset resource="../IMG/recursos.qrc">
+                   <normaloff>:/img/sign-in.svg</normaloff>:/img/sign-in.svg</iconset>
+                 </attribute>
+                 <attribute name="title">
+                  <string>ENTRADA</string>
+                 </attribute>
+                 <layout class="QHBoxLayout" name="horizontalLayout_19">
+                  <item>
+                   <widget class="QTableWidget" name="tabela_entrada">
+                    <property name="toolTip">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TIRE FOTOS DO ESTADO DO PRODUTO QUANDO ELE ENTROU&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="autoScrollMargin">
+                     <number>20</number>
+                    </property>
+                    <property name="editTriggers">
+                     <set>QAbstractItemView::NoEditTriggers</set>
+                    </property>
+                    <property name="tabKeyNavigation">
+                     <bool>true</bool>
+                    </property>
+                    <property name="selectionMode">
+                     <enum>QAbstractItemView::NoSelection</enum>
+                    </property>
+                    <attribute name="horizontalHeaderDefaultSectionSize">
+                     <number>130</number>
+                    </attribute>
+                    <row>
+                     <property name="text">
+                      <string>ANEXO_1</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>ANEXO_2</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>ANEXO_3</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>ANEXO_4</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>ANEXO_5</string>
+                     </property>
+                    </row>
+                    <column>
+                     <property name="text">
+                      <string>FOTO</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="../IMG/recursos.qrc">
+                       <normaloff>:/img/attach.svg</normaloff>:/img/attach.svg</iconset>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>OPERAÇÕES</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="../IMG/recursos.qrc">
+                       <normaloff>:/img/cogwheels.svg</normaloff>:/img/cogwheels.svg</iconset>
+                     </property>
+                    </column>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="tab_2">
+                 <attribute name="icon">
+                  <iconset resource="../IMG/recursos.qrc">
+                   <normaloff>:/img/sign-out-option.svg</normaloff>:/img/sign-out-option.svg</iconset>
+                 </attribute>
+                 <attribute name="title">
+                  <string>SAÍDA</string>
+                 </attribute>
+                 <layout class="QVBoxLayout" name="verticalLayout_15">
+                  <item>
+                   <widget class="QTableWidget" name="tabela_saida">
+                    <property name="toolTip">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TIRE FOTOS DO ESTADO DO PRODUTO EM SEU NOVO ESTADO&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="editTriggers">
+                     <set>QAbstractItemView::NoEditTriggers</set>
+                    </property>
+                    <property name="tabKeyNavigation">
+                     <bool>true</bool>
+                    </property>
+                    <property name="selectionMode">
+                     <enum>QAbstractItemView::NoSelection</enum>
+                    </property>
+                    <property name="selectionBehavior">
+                     <enum>QAbstractItemView::SelectRows</enum>
+                    </property>
+                    <attribute name="horizontalHeaderDefaultSectionSize">
+                     <number>130</number>
+                    </attribute>
+                    <row>
+                     <property name="text">
+                      <string>ANEXO_1</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>ANEXO_2</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>ANEXO_3</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>ANEXO_4</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>ANEXO_5</string>
+                     </property>
+                    </row>
+                    <column>
+                     <property name="text">
+                      <string>FOTO</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="../IMG/recursos.qrc">
+                       <normaloff>:/img/attach.svg</normaloff>:/img/attach.svg</iconset>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>OPERAÇÕES</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="../IMG/recursos.qrc">
+                       <normaloff>:/img/cogwheels.svg</normaloff>:/img/cogwheels.svg</iconset>
+                     </property>
+                    </column>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="valores_situacao">
+           <property name="title">
+            <string/>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_10">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_9">
+                <item>
+                 <widget class="QLabel" name="label_5">
+                  <property name="text">
+                   <string>TECNICO</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="tecnico">
+                  <item>
+                   <property name="text">
+                    <string>SELECIONE TECNICO</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_2">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_4">
+                  <item>
+                   <widget class="QLabel" name="label_3">
+                    <property name="text">
+                     <string>VALOR SERVIÇOS</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDoubleSpinBox" name="valor_servicos">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="contextMenuPolicy">
+                     <enum>Qt::NoContextMenu</enum>
+                    </property>
+                    <property name="wrapping">
+                     <bool>false</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                    </property>
+                    <property name="buttonSymbols">
+                     <enum>QAbstractSpinBox::NoButtons</enum>
+                    </property>
+                    <property name="correctionMode">
+                     <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
+                    </property>
+                    <property name="showGroupSeparator" stdset="0">
+                     <bool>true</bool>
+                    </property>
+                    <property name="suffix">
+                     <string> R$</string>
+                    </property>
+                    <property name="maximum">
+                     <double>999999999.990000009536743</double>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_5">
+                  <item>
+                   <widget class="QLabel" name="label_4">
+                    <property name="text">
+                     <string>VALOR PEÇAS</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDoubleSpinBox" name="valor_pecas">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="contextMenuPolicy">
+                     <enum>Qt::NoContextMenu</enum>
+                    </property>
+                    <property name="wrapping">
+                     <bool>false</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                    </property>
+                    <property name="buttonSymbols">
+                     <enum>QAbstractSpinBox::NoButtons</enum>
+                    </property>
+                    <property name="correctionMode">
+                     <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
+                    </property>
+                    <property name="showGroupSeparator" stdset="0">
+                     <bool>true</bool>
+                    </property>
+                    <property name="suffix">
+                     <string> R$</string>
+                    </property>
+                    <property name="maximum">
+                     <double>999999999.990000009536743</double>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_8">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_4">
+                <item>
+                 <widget class="QLabel" name="label_6">
+                  <property name="text">
+                   <string>SITUAÇÃO</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="situacao">
+                  <item>
+                   <property name="text">
+                    <string>SELECIONE SITUAÇÃO</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>ABANDONADO PELO CLIENTE</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>ENTREGA PENDENTE</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>RETIRADA CLIENTE</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>PENDENTE (PEÇAS)</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>SAÍDA ENTREGA</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>NADA CONSTA</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>NA BANCADA</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>ENTREGA OK</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>RETORNO</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_3">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_3">
+                  <item>
+                   <widget class="QLabel" name="label_2">
+                    <property name="minimumSize">
+                     <size>
+                      <width>100</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>DESCONTOS(-)</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDoubleSpinBox" name="desconto">
+                    <property name="contextMenuPolicy">
+                     <enum>Qt::NoContextMenu</enum>
+                    </property>
+                    <property name="wrapping">
+                     <bool>false</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                    </property>
+                    <property name="buttonSymbols">
+                     <enum>QAbstractSpinBox::NoButtons</enum>
+                    </property>
+                    <property name="correctionMode">
+                     <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
+                    </property>
+                    <property name="showGroupSeparator" stdset="0">
+                     <bool>true</bool>
+                    </property>
+                    <property name="suffix">
+                     <string> R$</string>
+                    </property>
+                    <property name="maximum">
+                     <double>999999999.990000009536743</double>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_2">
+                  <item>
+                   <widget class="QLabel" name="label">
+                    <property name="text">
+                     <string>VALOR TOTAL</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDoubleSpinBox" name="valor_total">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="contextMenuPolicy">
+                     <enum>Qt::NoContextMenu</enum>
+                    </property>
+                    <property name="wrapping">
+                     <bool>false</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                    </property>
+                    <property name="buttonSymbols">
+                     <enum>QAbstractSpinBox::NoButtons</enum>
+                    </property>
+                    <property name="correctionMode">
+                     <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
+                    </property>
+                    <property name="showGroupSeparator" stdset="0">
+                     <bool>true</bool>
+                    </property>
+                    <property name="suffix">
+                     <string> R$</string>
+                    </property>
+                    <property name="maximum">
+                     <double>999999999.990000009536743</double>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_2">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <property name="spacing">
+          <number>6</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QGroupBox" name="groupBox_4">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="title">
+            <string/>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="sizeConstraint">
+             <enum>QLayout::SetDefaultConstraint</enum>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_17">
+              <property name="leftMargin">
+               <number>9</number>
+              </property>
+              <property name="rightMargin">
+               <number>9</number>
+              </property>
+              <item>
+               <widget class="QFrame" name="frame_3">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_18">
+                 <item>
+                  <widget class="QLabel" name="label_9">
+                   <property name="font">
+                    <font>
+                     <family>MS Shell Dlg 2</family>
+                     <pointsize>20</pointsize>
+                     <weight>50</weight>
+                     <italic>false</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>N. O.S.</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLCDNumber" name="codigo">
+                   <property name="maximumSize">
+                    <size>
+                     <width>200</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::NoFrame</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Plain</enum>
+                   </property>
+                   <property name="lineWidth">
+                    <number>1</number>
+                   </property>
+                   <property name="midLineWidth">
+                    <number>0</number>
+                   </property>
+                   <property name="smallDecimalPoint">
+                    <bool>false</bool>
+                   </property>
+                   <property name="digitCount">
+                    <number>10</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>0</width>
+                  <height>7</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QPushButton" name="imprimir">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="../IMG/recursos.qrc">
+                <normaloff>:/img/excel.svg</normaloff>:/img/excel.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>55</width>
+                <height>62</height>
+               </size>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_8">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;FAÇA IMPRESSÃO OU EXPORTE PARA EXCEL&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>IMPRIMIR</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="checklist">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="../IMG/recursos.qrc">
+                <normaloff>:/img/test.svg</normaloff>:/img/test.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>55</width>
+                <height>62</height>
+               </size>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_10">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;FAÇA IMPRESSÃO DO CHECK LIST&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>CHECKLIST</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="termos">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="../IMG/recursos.qrc">
+                <normaloff>:/img/plan.svg</normaloff>:/img/plan.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>55</width>
+                <height>62</height>
+               </size>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_11">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;SELECIONE UM TEMO DE GARANTIA. CASO NÃO SELECIONE OUTRO SERÁ IMPRESSO O PADRÃO&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>TERMOS</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>134</height>
+               </size>
+              </property>
+              <property name="title">
+               <string>OPERAÇÕES</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout">
+               <item>
+                <widget class="QPushButton" name="finalizar">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../IMG/recursos.qrc">
+                   <normaloff>:/img/payment-terminal.svg</normaloff>:/img/payment-terminal.svg</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>45</width>
+                   <height>46</height>
+                  </size>
+                 </property>
+                 <property name="flat">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="sair">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../IMG/recursos.qrc">
+                   <normaloff>:/img/cross.svg</normaloff>:/img/cross.svg</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>45</width>
+                   <height>46</height>
+                  </size>
+                 </property>
+                 <property name="flat">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="cadastrar">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../IMG/recursos.qrc">
+                   <normaloff>:/img/save.svg</normaloff>:/img/save.svg</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>45</width>
+                   <height>46</height>
+                  </size>
+                 </property>
+                 <property name="flat">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../IMG/recursos.qrc"/>
+ </resources>
+ <connections/>
+</ui>

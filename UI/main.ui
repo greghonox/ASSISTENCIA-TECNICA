@@ -1,0 +1,1116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1180</width>
+    <height>732</height>
+   </rect>
+  </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>ASSISTENCIA TECNICA DE MANUNTEÇÃO</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../IMG/recursos.qrc">
+    <normaloff>:/img/technician.svg</normaloff>:/img/technician.svg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QToolTip {
+    border: 2px solid darkkhaki;
+    padding: 5px;
+    border-radius: 3px;
+    opacity: 200;	
+	color: rgb(1, 92, 146);
+	background-color: rgb(188, 230, 254);	
+	border-color: rgb(1, 92, 146);
+}
+
+#principal{	
+	background-image: url(:/img/hardware-e1535121140229.jpg);
+}
+
+QWidget{		
+	background-color: rgb(188, 230, 254, 150);
+}
+
+#ferramentas{	
+	background-color: qlineargradient(spread:pad, x1:0.778, y1:1, x2:1, y2:0, stop:0 rgba(1, 92, 146, 255), stop:1 rgba(188, 230, 254, 200));
+	border: 1px;
+	border-color: rgb(188, 230, 254);
+}
+
+#ferramentas QToolButton{
+	color: rgb(255, 255, 255);
+	font: 10pt &quot;Franklin Gothic Heavy&quot;;	
+}
+
+#ferramentas QGroupBox{
+	border:0px;
+}
+
+QToolButton{
+	background-color: rgba(255, 255, 255, 0);
+	margin: 0px 50px 0px 50px;	
+	padding: 0px 100px 0px 100px;	
+}
+
+QToolButton:hover:pressed{
+	background-color: rgb(84, 167, 216);
+}
+
+QToolButton:hover{
+	background-color: rgb(1, 92, 146);
+}
+
+#grupo_operacao, #grupo_usuario{
+	background-color: rgba(255, 255, 255, 0);
+}
+
+#grupo_painel{	
+	background-color: rgb(188, 230, 254, 150);
+}
+
+#grupo_painel, #servicos, #grupo_produtos, QMenu, QMenuBar, QScrollArea{
+	border: 1px;
+	border-color: rgb(1, 92, 146);
+	font: 87 10pt &quot;Arial Black&quot;;	
+	color: rgb(1, 92, 146);
+}
+
+#servicos, #produtos{
+	background-color: rgb(68, 154, 202, 100);
+}
+
+#grupo_operacao{ 			
+	color: rgb(1, 92, 146);
+	font: 87 12pt &quot;Arial Black&quot;;
+}
+
+#grupo_tabela{
+	border: 1px;
+	border-radius: 8px;		
+	background-color: rgba(1, 92, 146, 0);
+}
+#tabela::item:hover {	
+	background-color: rgb(255, 255, 127);
+}
+
+#busca{
+	border-radius: 5px;		
+	background-color: rgb(68, 154, 202, 150);
+	margin:0px;
+	padding: 0px;
+}
+
+#bt_busca, #in_busca{
+	background-color: rgb(68, 154, 202);	
+	color: rgb(188, 230, 254);
+	border: 0px;
+	height: 50px;
+	margin:0px;
+	padding: 0px;
+}
+
+#bt_busca:hover:pressed{
+	background-color: rgb(84, 167, 216);
+}
+
+#bt_busca:hover{
+	background-color: rgb(1, 92, 146);
+}
+
+Line{
+	background-color: rgb(68, 154, 202);
+}
+
+#tabela{
+	background-color: rgb(68, 154, 202, 200);
+	border: 1px;
+}
+
+#tabela::item:selected{
+	background-color: rgb(0, 255, 255);
+}
+
+#tabela:item{	
+	background-color: rgb(136, 204, 245);
+}
+
+#tabela::indicator:unchecked {
+	background-color: rgb(68, 154, 202);
+}
+
+#titulo{
+	background-color: rgba(255, 255, 255, 0);
+	color: rgb(255, 255, 255);
+}
+</string>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="principal">
+   <layout class="QVBoxLayout" name="verticalLayout_6">
+    <item>
+     <widget class="QFrame" name="frame_2">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QFrame" name="frame">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>327</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>330</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout" stretch="0">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>9</number>
+          </property>
+          <property name="topMargin">
+           <number>4</number>
+          </property>
+          <property name="rightMargin">
+           <number>9</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QGroupBox" name="ferramentas">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="title">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <layout class="QVBoxLayout" name="_2">
+             <property name="spacing">
+              <number>6</number>
+             </property>
+             <property name="sizeConstraint">
+              <enum>QLayout::SetDefaultConstraint</enum>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QGroupBox" name="grupo_usuario">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>100</height>
+                </size>
+               </property>
+               <property name="autoFillBackground">
+                <bool>false</bool>
+               </property>
+               <property name="title">
+                <string/>
+               </property>
+               <property name="flat">
+                <bool>false</bool>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_3">
+                <item>
+                 <widget class="QToolButton" name="usuarios">
+                  <property name="acceptDrops">
+                   <bool>false</bool>
+                  </property>
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;GERENCIE OS USUÁRIOS DO SISTEMA&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="autoFillBackground">
+                   <bool>false</bool>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../IMG/recursos.qrc">
+                    <normaloff>:/img/man.svg</normaloff>:/img/man.svg</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>75</width>
+                    <height>63</height>
+                   </size>
+                  </property>
+                  <property name="popupMode">
+                   <enum>QToolButton::InstantPopup</enum>
+                  </property>
+                  <property name="toolButtonStyle">
+                   <enum>Qt::ToolButtonIconOnly</enum>
+                  </property>
+                  <property name="autoRaise">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="Line" name="line">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="clientes">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;GERENCIE OS CLIENTES DO SISTEMA&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>CLIENTES</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../IMG/recursos.qrc">
+                 <normaloff>:/img/consultation.svg</normaloff>:/img/consultation.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+               <property name="popupMode">
+                <enum>QToolButton::InstantPopup</enum>
+               </property>
+               <property name="toolButtonStyle">
+                <enum>Qt::ToolButtonTextUnderIcon</enum>
+               </property>
+               <property name="autoRaise">
+                <bool>true</bool>
+               </property>
+               <property name="arrowType">
+                <enum>Qt::NoArrow</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="produtos">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;GERENCIE OS PRODUTOS DO SISTEMA&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>EQUIPAMENTOS</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../IMG/recursos.qrc">
+                 <normaloff>:/img/box.svg</normaloff>:/img/box.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+               <property name="popupMode">
+                <enum>QToolButton::DelayedPopup</enum>
+               </property>
+               <property name="toolButtonStyle">
+                <enum>Qt::ToolButtonTextUnderIcon</enum>
+               </property>
+               <property name="autoRaise">
+                <bool>true</bool>
+               </property>
+               <property name="arrowType">
+                <enum>Qt::NoArrow</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="tecnicos">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;GERENCIE OS TENICOS DO SISTEMA&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>TECNICOS</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../IMG/recursos.qrc">
+                 <normaloff>:/img/technician.svg</normaloff>:/img/technician.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+               <property name="popupMode">
+                <enum>QToolButton::DelayedPopup</enum>
+               </property>
+               <property name="toolButtonStyle">
+                <enum>Qt::ToolButtonTextUnderIcon</enum>
+               </property>
+               <property name="autoRaise">
+                <bool>true</bool>
+               </property>
+               <property name="arrowType">
+                <enum>Qt::NoArrow</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="ordem_servicos">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;GERENCIE AS ORDENS DE SERVIÇOS&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>ORDEM SERVIÇOS</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../IMG/recursos.qrc">
+                 <normaloff>:/img/design.svg</normaloff>:/img/design.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+               <property name="popupMode">
+                <enum>QToolButton::DelayedPopup</enum>
+               </property>
+               <property name="toolButtonStyle">
+                <enum>Qt::ToolButtonTextUnderIcon</enum>
+               </property>
+               <property name="autoRaise">
+                <bool>true</bool>
+               </property>
+               <property name="arrowType">
+                <enum>Qt::NoArrow</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="fornecedores">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;GERENCIE OS FORNECEDORES DO SISTEMA&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>FORNECEDORES</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../IMG/recursos.qrc">
+                 <normaloff>:/img/operator.svg</normaloff>:/img/operator.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+               <property name="popupMode">
+                <enum>QToolButton::DelayedPopup</enum>
+               </property>
+               <property name="toolButtonStyle">
+                <enum>Qt::ToolButtonTextUnderIcon</enum>
+               </property>
+               <property name="autoRaise">
+                <bool>true</bool>
+               </property>
+               <property name="arrowType">
+                <enum>Qt::NoArrow</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="Line" name="line_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QGroupBox" name="grupo_operacao">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>71</height>
+                </size>
+               </property>
+               <property name="title">
+                <string>OPERAÇÃOES</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_2">
+                <item>
+                 <widget class="QToolButton" name="sair">
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;SAIA DO SISTEMA&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../IMG/recursos.qrc">
+                    <normaloff>:/img/shutdown.svg</normaloff>:/img/shutdown.svg</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>36</width>
+                    <height>36</height>
+                   </size>
+                  </property>
+                  <property name="autoRaise">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="grupo_painel">
+         <property name="minimumSize">
+          <size>
+           <width>800</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QGroupBox" name="grupo_produtos">
+            <property name="title">
+             <string/>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="QGroupBox" name="busca">
+               <property name="title">
+                <string/>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_4">
+                  <item>
+                   <widget class="QLineEdit" name="in_busca">
+                    <property name="font">
+                     <font>
+                      <family>Arial Narrow</family>
+                      <pointsize>20</pointsize>
+                      <weight>50</weight>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="toolTip">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;FAÇA BUSCA POR CLIENTES, SERVIÇOS OU PRODUTOS!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="placeholderText">
+                     <string>CLIENTES ... SERVIÇOS ... PRODUTOS...</string>
+                    </property>
+                    <property name="clearButtonEnabled">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="Line" name="line_3">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                     <enum>QSizePolicy::Fixed</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>6</width>
+                      <height>2</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QToolButton" name="bt_busca">
+                    <property name="toolTip">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;FAÇA BUSCA POR CLIENTES, SERVIÇOS OU PRODUTOS!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="../IMG/recursos.qrc">
+                      <normaloff>:/img/find-my-friend.svg</normaloff>:/img/find-my-friend.svg</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>40</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QGroupBox" name="grupo_tabela">
+               <property name="title">
+                <string/>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_6">
+                <item>
+                 <widget class="QScrollArea" name="scrollArea">
+                  <property name="widgetResizable">
+                   <bool>true</bool>
+                  </property>
+                  <widget class="QWidget" name="scrollAreaWidgetContents">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>755</width>
+                     <height>474</height>
+                    </rect>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_5">
+                    <item>
+                     <widget class="QTableWidget" name="tabela"/>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>72</width>
+              <height>7</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="barra_status">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="minimizar">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ESCONDE A APLICAÇÃO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="../IMG/recursos.qrc">
+           <normaloff>:/img/minimizi.svg</normaloff>:/img/minimizi.svg</iconset>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="restaurar">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;RESTAURA A APLICAÇÃO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="../IMG/recursos.qrc">
+           <normaloff>:/img/maximize.svg</normaloff>:/img/maximize.svg</iconset>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="fechar_b">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;FECHA A APLICAÇÃO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="../IMG/recursos.qrc">
+           <normaloff>:/img/close.svg</normaloff>:/img/close.svg</iconset>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="titulo">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>900</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>ASSISTENCIA TECNICA DE MANUNTEÇÃO - GREGHONO@GMAIL.COM</string>
+         </property>
+         <property name="scaledContents">
+          <bool>false</bool>
+         </property>
+         <property name="wordWrap">
+          <bool>false</bool>
+         </property>
+         <property name="openExternalLinks">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>19</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="negativo">
+         <property name="maximumSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::PlainText</enum>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="../IMG/recursos.qrc">:/img/green-led-on.png</pixmap>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="positivo">
+         <property name="maximumSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::PlainText</enum>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="../IMG/recursos.qrc">:/img/led-red-on.png</pixmap>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateTimeEdit" name="data_hora">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="accelerated">
+          <bool>false</bool>
+         </property>
+         <property name="showGroupSeparator" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="displayFormat">
+          <string>dd/MM/yyyy HH:mm:ss</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1180</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuCADASTROS">
+    <property name="title">
+     <string>CADASTROS</string>
+    </property>
+    <addaction name="cadastro_cliente"/>
+    <addaction name="cadastro_tecnico"/>
+    <addaction name="cadastro_fornecedor"/>
+    <addaction name="cadastro_usuarios"/>
+   </widget>
+   <widget class="QMenu" name="menuEQUIPAMENTOS">
+    <property name="title">
+     <string>PRODUTOS/SERVIÇOS</string>
+    </property>
+    <addaction name="cadastrar_produto"/>
+    <addaction name="cadastro_servicos"/>
+    <addaction name="categorias"/>
+   </widget>
+   <widget class="QMenu" name="menuSERVI_OS_OR_AMENTO">
+    <property name="title">
+     <string>SERVIÇOS/ORÇAMENTO</string>
+    </property>
+    <addaction name="gerar_ordem_servico"/>
+    <addaction name="termos_responsabilidade"/>
+   </widget>
+   <widget class="QMenu" name="menuSOBRE">
+    <property name="title">
+     <string>SOBRE</string>
+    </property>
+    <addaction name="ajuda"/>
+    <addaction name="configuracoes"/>
+    <addaction name="contrato_uso"/>
+    <addaction name="meus_dados"/>
+    <addaction name="mensagens_sistema"/>
+    <addaction name="alterar_logo"/>
+   </widget>
+   <widget class="QMenu" name="menuESTOQUE">
+    <property name="title">
+     <string>ESTOQUE</string>
+    </property>
+    <addaction name="gerenciar_estoque"/>
+   </widget>
+   <addaction name="menuCADASTROS"/>
+   <addaction name="menuEQUIPAMENTOS"/>
+   <addaction name="menuESTOQUE"/>
+   <addaction name="menuSERVI_OS_OR_AMENTO"/>
+   <addaction name="menuSOBRE"/>
+  </widget>
+  <action name="cadastro_cliente">
+   <property name="icon">
+    <iconset resource="../IMG/recursos.qrc">
+     <normaloff>:/img/consultation.svg</normaloff>:/img/consultation.svg</iconset>
+   </property>
+   <property name="text">
+    <string>CLIENTES</string>
+   </property>
+  </action>
+  <action name="actionPRODUTOS">
+   <property name="text">
+    <string>PRODUTOS</string>
+   </property>
+  </action>
+  <action name="cadastro_tecnico">
+   <property name="icon">
+    <iconset resource="../IMG/recursos.qrc">
+     <normaloff>:/img/technician.svg</normaloff>:/img/technician.svg</iconset>
+   </property>
+   <property name="text">
+    <string>TECNICOS</string>
+   </property>
+  </action>
+  <action name="cadastro_fornecedor">
+   <property name="icon">
+    <iconset resource="../IMG/recursos.qrc">
+     <normaloff>:/img/service.svg</normaloff>:/img/service.svg</iconset>
+   </property>
+   <property name="text">
+    <string>FORNECEDORES</string>
+   </property>
+  </action>
+  <action name="cadastrar_produto">
+   <property name="icon">
+    <iconset resource="../IMG/recursos.qrc">
+     <normaloff>:/img/box.svg</normaloff>:/img/box.svg</iconset>
+   </property>
+   <property name="text">
+    <string>CADASTRO EQUIPAMENTOS</string>
+   </property>
+  </action>
+  <action name="cadastro_software">
+   <property name="icon">
+    <iconset resource="../IMG/recursos.qrc">
+     <normaloff>:/img/code.svg</normaloff>:/img/code.svg</iconset>
+   </property>
+   <property name="text">
+    <string>CADASTROS SOFTWARES</string>
+   </property>
+  </action>
+  <action name="gerar_ordem_servico">
+   <property name="icon">
+    <iconset resource="../IMG/recursos.qrc">
+     <normaloff>:/img/plan.svg</normaloff>:/img/plan.svg</iconset>
+   </property>
+   <property name="text">
+    <string>GERAR ORDEM SERVIÇOS</string>
+   </property>
+  </action>
+  <action name="termos_responsabilidade">
+   <property name="icon">
+    <iconset resource="../IMG/recursos.qrc">
+     <normaloff>:/img/gdpr.svg</normaloff>:/img/gdpr.svg</iconset>
+   </property>
+   <property name="text">
+    <string>TERMOS CONTRATOS</string>
+   </property>
+  </action>
+  <action name="ajuda">
+   <property name="icon">
+    <iconset resource="../IMG/recursos.qrc">
+     <normaloff>:/img/horse-about-to-attack-side-view.svg</normaloff>:/img/horse-about-to-attack-side-view.svg</iconset>
+   </property>
+   <property name="text">
+    <string>AJUDA</string>
+   </property>
+  </action>
+  <action name="tipo_servico">
+   <property name="icon">
+    <iconset resource="../IMG/recursos.qrc">
+     <normaloff>:/img/folder.svg</normaloff>:/img/folder.svg</iconset>
+   </property>
+   <property name="text">
+    <string>TIPO SERVIÇOS</string>
+   </property>
+  </action>
+  <action name="cadastro_usuarios">
+   <property name="icon">
+    <iconset resource="../IMG/recursos.qrc">
+     <normaloff>:/img/man.svg</normaloff>:/img/man.svg</iconset>
+   </property>
+   <property name="text">
+    <string>USUÁRIOS</string>
+   </property>
+  </action>
+  <action name="entrada_estoque">
+   <property name="icon">
+    <iconset resource="../IMG/recursos.qrc">
+     <normaloff>:/img/stock-svgrepo-com.svg</normaloff>:/img/stock-svgrepo-com.svg</iconset>
+   </property>
+   <property name="text">
+    <string>ENTRADAS</string>
+   </property>
+  </action>
+  <action name="configuracoes">
+   <property name="icon">
+    <iconset resource="../IMG/recursos.qrc">
+     <normaloff>:/img/gear-svgrepo-com.svg</normaloff>:/img/gear-svgrepo-com.svg</iconset>
+   </property>
+   <property name="text">
+    <string>CONFIGURAÇÕES</string>
+   </property>
+  </action>
+  <action name="categorias">
+   <property name="icon">
+    <iconset resource="../IMG/recursos.qrc">
+     <normaloff>:/img/design.svg</normaloff>:/img/design.svg</iconset>
+   </property>
+   <property name="text">
+    <string>CATEGORIAS</string>
+   </property>
+  </action>
+  <action name="cadastro_servicos">
+   <property name="icon">
+    <iconset resource="../IMG/recursos.qrc">
+     <normaloff>:/img/customer-support.svg</normaloff>:/img/customer-support.svg</iconset>
+   </property>
+   <property name="text">
+    <string>CADASTRO SERVIÇOS</string>
+   </property>
+  </action>
+  <action name="gerenciar_estoque">
+   <property name="icon">
+    <iconset resource="../IMG/recursos.qrc">
+     <normaloff>:/img/warehouse.svg</normaloff>:/img/warehouse.svg</iconset>
+   </property>
+   <property name="text">
+    <string>GERENCIAR ESTOQUE</string>
+   </property>
+  </action>
+  <action name="contrato_uso">
+   <property name="icon">
+    <iconset resource="../IMG/recursos.qrc">
+     <normaloff>:/img/plan.svg</normaloff>:/img/plan.svg</iconset>
+   </property>
+   <property name="text">
+    <string>CONTRATO DE USO</string>
+   </property>
+  </action>
+  <action name="meus_dados">
+   <property name="icon">
+    <iconset resource="../IMG/recursos.qrc">
+     <normaloff>:/img/login.svg</normaloff>:/img/login.svg</iconset>
+   </property>
+   <property name="text">
+    <string>MEUS DADOS</string>
+   </property>
+  </action>
+  <action name="mensagens_sistema">
+   <property name="icon">
+    <iconset resource="../IMG/recursos.qrc">
+     <normaloff>:/img/letter.svg</normaloff>:/img/letter.svg</iconset>
+   </property>
+   <property name="text">
+    <string>MENSAGENS DO SISTEMA</string>
+   </property>
+  </action>
+  <action name="alterar_logo">
+   <property name="icon">
+    <iconset resource="../IMG/recursos.qrc">
+     <normaloff>:/img/logo.svg</normaloff>:/img/logo.svg</iconset>
+   </property>
+   <property name="text">
+    <string>ALTERAR LOGO</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../IMG/recursos.qrc"/>
+ </resources>
+ <connections/>
+</ui>
